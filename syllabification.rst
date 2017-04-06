@@ -1,7 +1,7 @@
-.. _syllable_segmentation:
+.. _syllabification:
 
 *************
-Syllable Segmentation
+Syllabification
 *************
 
 .. _about_Syllable Segmentation:
@@ -9,24 +9,18 @@ Syllable Segmentation
 About the function
 ------------------
 
-The syllable segmentation functions act as a work flow for the analysis of syllable structure. While it will provide information about any language type, it is specifically designed with onset maximization and coda maximization in mind. Onset Maximization was first described by [Selkirk1982]_: when syllabifying, any consonants should be allotted to the beginning of a syllable, so long as the language allows a consonant cluster phonotactically. However, following Selkirk, Coda maximization was also suggested [Wells1990]_. Generally, all known languages allow onsets although some languages do not permit codas. The typological literature suggests that there are languages that require onsets and languages where they are optional, but there are no languages where onsets are banned [Zec2007]_. In contrast, no language requires codas, and some do not allow them at all. Nevertheless, languages such as English and Finnish have been argued to feature coda maximization (in combination with other factors). Indeed while languages such as Finnish allow both onsets and codas, they allow coda clusters but do not allow onset clusters. In the future, both onset maximization code and coda maximization code will work together.
-
-The intended work flow for these functions is as follows: 
-1. Create a list of all word-initial syllable onsets and all word-final codas (if any). 
-2. Segment the corpus either with the onsets or codas first. (Usually onsets the first time) 
-3. Examine the resulting segmentation. There will likely be word-medial syllable clusters left over that have not been segmented.
-(3a.) Modify the csv list of possible onset clusters or coda clusters.
-(3b) Segment the corpus by onsets or codas. 
+The syllabification functions act as a work flow for the analysis of syllable structure. While it will provide information about any language type, it is specifically designed with onset maximization and coda maximization in mind. Onset Maximization was first described by [Selkirk1982]_: when syllabifying, any consonants should be allotted to the beginning of a syllable, so long as the language allows a consonant cluster phonotactically. However, following Selkirk, Coda maximization was also suggested [Wells1990]_. Generally, all known languages allow onsets although some languages do not permit codas. The typological literature suggests that there are languages that require onsets and languages where they are optional, but there are no languages where onsets are banned [Zec2007]_. In contrast, no language requires codas, and some do not allow them at all. Nevertheless, languages such as English and Finnish have been argued to feature coda maximization (in combination with other factors). Indeed while languages such as Finnish allow both onsets and codas, they allow coda clusters but do not allow onset clusters. In the future, both onset maximization code and coda maximization code will work together.
+ 
 
 
 
 .. _word_onset:
 
-Word Onset Finder
+Using the scripts together
 ---------------------
 
 
-Calculating informativity with a .corpus file
+Syllabifying
 ---------------------------------------------
     
 1.  **Run word_onset_finder.py**: Open a terminal and navigate to the directory where informativity.py is located. Note that PCT uses Python 3, and run the following:
